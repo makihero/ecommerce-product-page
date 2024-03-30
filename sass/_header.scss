@@ -1,0 +1,74 @@
+@use 'variables' as var;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    @media (min-width: 1115px) {
+        padding: 50px 0 0 0;
+        border-bottom: 2px solid var.$GrayishBlue;
+    }
+
+    &__menu-logo {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        @media (min-width: 1115px) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__menu {
+        &:hover {
+            cursor: pointer;
+        }
+        @media (min-width: 1115px) {
+            display: none;
+        }
+    }
+
+    &__cart-avatar {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        @media (min-width: 1115px) {
+            margin-bottom: 50px;
+            gap: 45px;
+        }
+    }
+
+    &__cart {
+        position: relative;
+        width: 24px;
+        &:hover {
+            cursor: pointer;
+        }
+
+        &-number {
+            display: none;
+            font-size: 0.6rem;
+            text-align: center;
+            color: var.$White;
+            background-color: var.$Orange;
+            position: absolute;
+            top: -5px;
+            right: 1px;
+            width: 15px;
+            height: 12px;
+            border-radius: 16px;
+        }
+    }
+
+    &__avatar {
+        width: 24px;
+        @media (min-width: 1115px) {
+            width: 50px;
+        }
+        &:hover {
+            cursor: pointer;
+            border: 2px solid var.$Orange;
+            border-radius: 50%;
+        }
+    }
+}

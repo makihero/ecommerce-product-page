@@ -1,0 +1,42 @@
+@use 'variables' as var;
+@use 'initial';
+@use 'header';
+@use 'navbar';
+@use 'modal';
+@use 'gallery';
+@use 'details';
+@use 'modal-cart';
+@use 'modal-gallery';
+
+ 
+.main-container {
+    width: 375px;
+    margin: auto;
+    position: relative;
+    @media (min-width: 1115px) {
+            width: 1115px;
+    }
+}
+
+.content {
+    @media (min-width: 1115px) {
+        display: flex;
+        margin: 90px 40px;
+        gap: 120px;
+
+    }
+}
+
+.show {
+    display: block;
+}
+
+.modal__cart-info-empty {
+    padding: 40px 0 100px 0;
+    display: grid;
+    place-content: center;
+    color: var.$DarkGrayishBlue;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+

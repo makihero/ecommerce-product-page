@@ -1,0 +1,31 @@
+@use 'variables' as var;
+
+.navbar {
+    display: none;
+
+    &__list {
+        display: flex;
+        list-style: none;
+        gap: 35px;
+        margin-right: 250px;
+        padding-top: 24px;
+    }
+
+    &__list-item {
+        font-size: 1.2em;
+        color: var.$DarkGrayishBlue;
+        font-weight: 400;
+        display: block;
+        height: 100px;
+        text-decoration: none;
+        &:hover {
+            border-bottom: 4px solid var.$Orange;
+            color: var.$VeryDarkBlue;
+            cursor: pointer;            
+        }
+    }
+
+    @media (min-width: 1115px) {
+        display: flex;
+    }
+}

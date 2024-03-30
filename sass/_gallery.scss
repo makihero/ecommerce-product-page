@@ -1,0 +1,69 @@
+@use 'variables' as var;
+
+.gallery {
+
+    &__image-container {
+        width: 100%;
+        height: 300px;
+        background-image: url('../images/image-product-1.jpg');
+        background-position-y: -35px;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 12px;
+    }
+
+    &__previous {
+        background-color: var.$White;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        padding: 12px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__next {
+        @extend .gallery__previous;
+    }
+
+    &__thumbnails {
+        display: none;
+        @media (min-width: 1115px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 20px;
+
+            .gallery__thumbnail {
+                width: 90px;
+                height: 90px;
+                border-radius: 10px;
+
+                &:hover {
+                    cursor: pointer;
+                    border: 2px solid var.$Orange;
+                }
+            }
+        }
+    }
+    @media (min-width: 1115px) {
+            width: 440px;
+
+            &__image-container {
+                height: 435px;
+                background-position-y: 0;
+            }
+
+            .gallery__image-container {
+                border-radius: 10px;
+            }
+
+            &__previous, &__next {
+                display: none;
+            }
+    }
+}

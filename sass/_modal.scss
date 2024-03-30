@@ -1,0 +1,44 @@
+@use 'variables' as var;
+@use 'mixins';
+
+.modal{
+    &__background{
+        @include mixins.modal-background;
+    }
+
+    &__navbar{
+        background-color: var.$White;
+        width: 70%;
+        height: 100%;
+        padding: 28px 24px;
+    }
+
+    &__navbar-close{
+        cursor: pointer;
+
+        &:hover{
+            content: url('../images/icon-close-o.svg');
+        }
+    }
+
+    &__navbar-list{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        list-style: none;
+    }
+
+    &__navbar-list-item{
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var.$VeryDarkBlue;
+        text-decoration: none;
+        transition: all 0.3s;
+
+        &:hover{
+            color: var.$Orange;
+            cursor: pointer;
+        }
+    }
+}
